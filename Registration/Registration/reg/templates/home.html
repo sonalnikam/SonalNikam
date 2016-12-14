@@ -1,0 +1,40 @@
+<html>
+<body bgcolor="FBAD42">
+<h2><a href="/lout/" style="float: right;">logout</a></h2>
+<font color="Black" face="Algerian">
+  {% load static %}
+   <form name = "form" method = "POST" action="/link1/">
+ {% csrf_token %}
+ <h2><marquee><font color="Blue">Car rental</font></marquee></h2>
+ <div>
+ <br> <br> <br>
+ <center>
+ <table class="center" border="1" width="25%" height="30%" bgcolor="42FBD7">
+ <tr>
+ <th>Location</th>
+   <td> <input type="text" name="loc_id" required=" " pattern="[A-Za-z]{1,10}"></td>
+ </tr>
+ <tr>
+    <th>From</th>
+   <td><input type="text" name="from_id" required=" " pattern="[A-Za-z]{1,10}"  ></td>
+    </tr>
+    <tr>
+    <th>To</th>
+    <td><input type="text" name="to_id" required=" " pattern="[A-Za-z]{1,10}"></td>
+    </tr>
+ <tr>
+ <td colspan="2" align="center"> &nbsp; &nbsp;  &nbsp;
+ <input type="submit" value="Book a Car" name="submit">
+ </td>
+ </tr>
+ </table>
+ </center>
+ </div>
+ </form>
+ <form method="post" action="/su/">
+  {% csrf_token %}
+<center> <input type="submit" value="View Bookings" name="submit" ></center>
+ </form>
+ </font>
+ </body>
+ </html>

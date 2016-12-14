@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<body>
+
+   <form name = "form" action = "/link/" method = "POST">
+ {% csrf_token %}
+ <div>
+ <center>
+ <table class="center" border="1" width="40%" height="50%">
+ <tr>
+ <td>NAME 
+ </td>
+ <td><input type="text" name="Name"  required=" ">
+ </td>
+ </tr>
+ <tr>
+ <td>USERNAME</td>
+    <td><input type="text" name="UName" required=" ">
+ </td>
+ </tr>
+ <tr>
+    <td>PASSWORD</td>
+    <td>
+   <input type="password" name="Password" required=" " pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)">
+    </td>
+    </tr>
+    <tr>
+    <td>CONFIRM PASSWORD </td><td>
+    <input type="password" name="CPassword" required=" " pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)">
+    </td>
+    </tr>
+ <tr>
+ <td colspan="2" align="center">
+<center><input type="submit" value="Register" name="sb_id"></center> 
+ </td>
+</tr>
+ </table>
+ </center>
+ </div>
+ </form>
+ <center>
+<a href="/hm/"><font color="Yellow"> Already Register Click here to login</font></a></center>
+ {% endblock %}

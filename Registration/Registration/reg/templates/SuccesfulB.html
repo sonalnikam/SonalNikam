@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Booking Info</title>
+</head>
+<body bgcolor="FBAD42">
+ {% load static %}
+ 
+ <h2><a href="/lout/" style="float: right;">logout</a></h2>
+<center>
+<br>
+<h1>BOOKINGS</h1>
+<br><br>
+<font face="MV Boli">
+<table border="1" width="30%" bgcolor="F97383">
+<tr>
+<th><h1><b>Location</b></h1></th>
+<th><h1><b>From </b></h1></th>
+<th><h1><b>To</b></h1></th>
+</tr>
+<tr>
+{% for post in posts %}
+
+<td><h4>{{ post.location }}</h4></td>
+
+<td><h4>{{ post.from_id }}</h4></td>
+
+<td><h4>{{ post.to }}</h4></td>
+</tr>
+
+
+{% endfor %}  
+
+</table>
+<h2><a href="/bookinfo/">Click here for Re-Booking!!!</a></h2>
+</font>
+</center> 
+</body>
+</html>
